@@ -199,6 +199,26 @@ updates:
       day: "sunday"
   -
     package-ecosystem: "gomod"
+    directory: "/instrumentation/github.com/go-swagger/go-swagger/otelswag"
+    labels:
+      - dependencies
+      - go
+      - "Skip Changelog"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+  -
+    package-ecosystem: "gomod"
+    directory: "/instrumentation/github.com/go-swagger/go-swagger/otelswag/example"
+    labels:
+      - dependencies
+      - go
+      - "Skip Changelog"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+  -
+    package-ecosystem: "gomod"
     directory: "/instrumentation/github.com/gocql/gocql/otelgocql"
     labels:
       - dependencies
