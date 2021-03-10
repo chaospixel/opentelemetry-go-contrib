@@ -80,7 +80,11 @@ func (op *OtelPlugin) before(operation string) gormHookFunc {
 	}
 }
 
+// TODO JW Support sanitising named fields (or just wait for someone else to do it)
 func extractQuery(tx *gorm.DB) string {
+
+	// Walk the statement.Clauses and replace the Values clause with a SanitizedValues clause (or something)
+
 	return tx.Dialector.Explain(tx.Statement.SQL.String(), tx.Statement.Vars...)
 }
 
